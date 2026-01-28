@@ -52,11 +52,10 @@ function filterExpertRows(data, critCols) {
 }
 
 function assignPlace(idx, total) {
-  if (idx < 2 && total >= 2) return "Гран-при";
-  if (idx < 4 && total >= 4) return "1 место";
-  if (idx < 6 && total >= 6) return "2 место";
-  if (idx < 8 && total >= 8) return "3 место";
-  return "Участник";
+  if (idx < 2) return "Гран-при";
+  if (idx < 5) return "1 место";
+  if (idx < 10) return "2 место";
+  return "3 место";
 }
 
 export default async function handler(req, res) {
@@ -109,3 +108,4 @@ export default async function handler(req, res) {
     }
   });
 }
+</parameter>
